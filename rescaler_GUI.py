@@ -69,7 +69,7 @@ input_var = tk.StringVar(value="in")
 output_var = tk.StringVar(value="out")
 width_var = tk.StringVar(value="1920")
 height_var = tk.StringVar(value="1080")
-ratio_var = tk.StringVar(value="16:9")
+ratio_var = tk.StringVar(value="3:2")
 
 # ---------------- Paths Section ----------------
 
@@ -113,7 +113,7 @@ ttk.Entry(ratio_row, textvariable=ratio_var, width=8).pack(side="left", padx=5)
 presets = ttk.Frame(settings)
 presets.pack(fill="x", pady=(6, 16))
 
-for text in ("16:9", "1:1", "9:16", "3:2"):
+for text in ("3:2", "16:9", "1:1", "9:16", "4:3"):
     ttk.Button(presets, text=text, command=lambda t=text: set_ratio(t)).pack(
         side="left", padx=4
     )
